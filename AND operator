@@ -1,4 +1,0 @@
--- WHERE statement combined with AND logical operator
-
-SELECT * FROM customer
-WHERE store_id = 1 AND address_id > 5;

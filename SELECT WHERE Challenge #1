@@ -2,4 +2,5 @@
 -- What's the name for the customer with the name Nancy Thomas?
 
 SELECT email FROM customer
-WHERE first_name = 'Nancy' AND last_name = 'Thomas';
+WHERE first_name = 'Nancy' 
+AND last_name = 'Thomas';

@@ -1,5 +1,0 @@
--- practice using WHERE statements in dvdrental Database
-
-SELECT customer_id, amount, payment_date
-FROM payment
-WHERE amount <= 1 OR amount >= 8;

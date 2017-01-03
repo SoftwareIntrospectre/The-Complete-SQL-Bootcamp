@@ -1,0 +1,4 @@
+-- practice using OR statement
+
+SELECT * FROM customer
+WHERE store_id = 1 OR store_id = 2;

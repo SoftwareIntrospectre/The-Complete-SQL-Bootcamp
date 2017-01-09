@@ -1,0 +1,7 @@
+--Get the customer ID numbers for the top 10 highest payment amounts
+
+SELECT customer_id, amount FROM payment
+ORDER BY amount DESC
+LIMIT 10;
+
+

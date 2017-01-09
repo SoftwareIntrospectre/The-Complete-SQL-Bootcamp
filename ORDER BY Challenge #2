@@ -1,0 +1,6 @@
+-- Get the titles of the movies with film ids 1-5.
+
+SELECT title, film_id FROM film
+ORDER BY film_id ASC
+LIMIT 5;
+

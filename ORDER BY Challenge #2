@@ -1,6 +1,7 @@
 -- Get the titles of the movies with film ids 1-5.
 
-SELECT title, film_id FROM film
-ORDER BY film_id ASC
+SELECT title, film_id, release_year FROM film
+ORDER BY film_id   --sorts ASC by default
 LIMIT 5;
+
 

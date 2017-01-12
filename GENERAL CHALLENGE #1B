@@ -1,4 +1,12 @@
 -- How many actors have a first name that starts with the letter P?
 
-SELECT COUNT(*) FROM actor
+--first attempt
+
+SELECT first_name COUNT 
+FROM actor
+WHERE first_name LIKE 'P%';
+
+--final attempt
+
+SELECT COUNT(*) FROM actor --difference: returning the count number, not the first names
 WHERE first_name LIKE 'P%';

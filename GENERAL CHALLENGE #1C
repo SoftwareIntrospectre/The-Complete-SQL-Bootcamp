@@ -1,0 +1,11 @@
+--How many unique districts are our customers from?
+
+-- First attempt
+
+SELECT DISTINCT district COUNT
+FROM address;
+
+-- Final attempt
+
+SELECT COUNT (DISTINCT(district)) --SELECTing the COUNT of each DISTINCT district
+FROM address 

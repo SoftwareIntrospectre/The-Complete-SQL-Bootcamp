@@ -1,11 +1,18 @@
 --How many unique districts are our customers from?
 
--- First attempt
+     -- First attempt
 
 SELECT DISTINCT district COUNT
 FROM address;
 
--- Final attempt
+     -- Final attempt
 
 SELECT COUNT (DISTINCT(district)) --SELECTing the COUNT of each DISTINCT district
 FROM address 
+
+------------------------------------------------------------------------------------
+
+-- Retrieve the list of names for those distinct districts from the previous question
+
+SELECT DISTINCT(district) --removing COUNT from the query
+FROM address;

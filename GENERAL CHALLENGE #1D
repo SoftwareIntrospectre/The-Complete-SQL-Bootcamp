@@ -1,0 +1,14 @@
+-- How many films have a rating of R and a replacement cost between $5 and $15?
+
+     - first attempt
+
+SELECT COUNT (DISTINCT(rating, replacement_cost)) FROM film
+WHERE rating = 'R' AND replacement_cost BETWEEN '5' AND '15';
+
+
+     - final attempt
+     
+SELECT COUNT(*) FROM film --count the rows returned
+WHERE rating = 'R'
+AND replacement_cost BETWEEN 5 AND 15;
+

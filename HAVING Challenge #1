@@ -1,0 +1,21 @@
+-- We want to know what customers are eligible for our platinum credit card. The requirements are 
+-- that the customer has at least a total of 40 transaction payments.
+
+-- What customers (by customer_id) are eligible for the credit card?
+
+
+
+
+SELECT customer_id, COUNT(payment_id)
+FROM payment
+GROUP BY customer_id
+HAVING COUNT(payment_id) >= 40 
+
+
+OR
+
+
+SELECT customer_id, COUNT(amount)
+FROM payment
+GROUP BY customer_id
+HAVING COUNT(amount) >= 40 

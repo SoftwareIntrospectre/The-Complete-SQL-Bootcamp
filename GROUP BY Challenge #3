@@ -1,7 +1,8 @@
 -- We want to send coupons to the 5 customers who have spent the most amount of money.
 -- Get me the customer IDs of the top 5 spenders.
 
-SELECT customer_id, SUM(amount) FROM payment -- return customer IDs and SUM amount from payment
+SELECT customer_id, SUM(amount) -- return customer IDs and SUM amount
+FROM payment 
 GROUP BY customer_id
 ORDER BY SUM(amount) DESC -- order by the sum of amounts in descending order
 LIMIT 5; -- top five

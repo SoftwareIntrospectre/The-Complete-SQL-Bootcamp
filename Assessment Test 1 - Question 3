@@ -1,0 +1,4 @@
+-- What customer has the highest customer ID number whose name starts with an 'E' 
+-- and has an address lower than 500?
+-- The answer is Eddie Tomlin
+

@@ -1,0 +1,5 @@
+-- How can you produce a list of facilities that charge a fee to members?
+
+SELECT name, membercost 
+FROM cd.facilities
+WHERE membercost > 0;

@@ -1,5 +1,11 @@
--- select count(*) from cd.facilities where guestcost >= 10;
+-- You'd like to get the signup date of your last member. How can you retrieve this information?
 
-SELECT COUNT(*) 
-FROM cd.facilities
-WHERE guestcost >= 10;
+SELECT MAX(joindate) -- chooses the highest value in this column
+FROM cd.members;
+
+
+
+--another option:
+
+SELECT MAX(joindate) AS latest -- renames the column "latest"
+FROM cd.members;

@@ -7,10 +7,11 @@
 --Have fun and feel free to ask any discussion questions if you're confused! 
 --Remember, we're just focused on the basics of creating a table right now!
 
-CREATE TABLE customer_info_dvdrental(
-    customer_firstName VARCHAR(99) NOT NULL,
-    customer_lastname VARCHAR(99) NOT NULL,
-    customer_email VARCHAR (99) NOT NULL,
-    customer_numberOfMinutesOnSite TIMESTAMP
+CREATE TABLE customer_info(
+    customer_user_id SERIAL PRIMARY KEY,
+    customer_first_name VARCHAR(99) NOT NULL,
+    customer_last_name VARCHAR(99) NOT NULL,
+    customer_email VARCHAR (255) UNIQUE NOT NULL,
+    customer_minutes_on_site INTEGER NOT NULL,
+    customer_sign_up TIMESTAMP NOT NULL
     );
-    

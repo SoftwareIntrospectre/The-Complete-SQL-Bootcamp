@@ -51,6 +51,12 @@ CREATE TABLE teachers(
 who has a phone number of 777-555-1234 
 --and doesn't have an email. He graduates in 2035 and has 5 as a homeroom number.
 
+
+-- step 4 -- 
+
+     INSERT INTO students(student_id, first_name, last_name, home_room_number, emergency_phone, graduation_year)
+     VALUES(1, 'Mark', 'Watney', 5, 777-555-1234, 2035);
+
 --Then insert a teacher names Jonas Salk (teacher_id = 1) 
 who as a homeroom number of 5 and is from the Biology department. 
 --His contact info is: jsalk@school.org and a phone number of 777-555-4321.

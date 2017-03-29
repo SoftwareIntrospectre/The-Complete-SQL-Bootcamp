@@ -18,6 +18,34 @@ homeroom_number, phone,email, and graduation year.
      --We must have a phone number to contact students in case of an emergency.
      --We must have ids as the primary key of the tables
      --Phone numbers and emails must be unique to the individual.
+        
+         -- step 1 --
+ CREATE DATABASE school
+ 
+         -- step 2 --
+    CREATE TABLE students(
+        student_id SERIAL PRIMARY KEY,
+        first_name VARCHAR,
+        last_name VARCHAR,
+        home_room_number INTEGER,
+        emergency_phone INTEGERUNIQUE,
+        email VARCHAR(100) UNIQUE,
+        graduation_year VARCHAR(4)
+        );
+        
+        -- step 3 --
+CREATE TABLE teachers(
+        teacher_id SERIAL PRIMARY KEY,
+        first_name VARCHAR,
+        last_name VARCHAR,
+        home_room_number INTEGER,
+        emergency_phone INTEGER UNIQUE,
+        email VARCHAR(100) UNIQUE,
+        graduation_year VARCHAR(4)
+        );
+        
+     
+     
 
 --Once you've made the tables, insert a student named Mark Watney (student_id=1) 
 who has a phone number of 777-555-1234 

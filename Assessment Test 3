@@ -7,7 +7,7 @@ This test will actually consist of a more open-ended assignment below:
 --Create a new database called "School" this database should have two tables: teachers and students.
 
 --The students table should have columns for student_id, first_name,last_name, 
-homeroom_number, phone,email, and graduation year.
+homeroom_number, phone, email, and graduation_year.
 
 --The teachers table should have columns for teacher_id, first_name, last_name,
 
@@ -19,33 +19,34 @@ homeroom_number, phone,email, and graduation year.
      --We must have ids as the primary key of the tables
      --Phone numbers and emails must be unique to the individual.
         
-         -- step 1 --
- CREATE DATABASE school;
+-- Step 1 --
+        
+        CREATE DATABASE school;
  
-         -- step 2 --
-    CREATE TABLE students(
-        student_id SERIAL PRIMARY KEY,
-        first_name VARCHAR,
-        last_name VARCHAR,
-        home_room_number INTEGER,
-        emergency_phone INTEGERUNIQUE,
-        email VARCHAR(100) UNIQUE,
-        graduation_year VARCHAR(4)
-        );
+-- Step 2 --
+
+        CREATE TABLE students(
+          student_id SERIAL PRIMARY KEY,
+          first_name VARCHAR NOT NULL,
+          last_name VARCHAR NOT NULL,
+          homeroom_number INTEGER,
+          phone VARCHAR(12) UNIQUE NOT NULL,
+          email VARCHAR(100) UNIQUE,
+          graduation_year INTEGER
+          );
         
-        -- step 3 --
-CREATE TABLE teachers(
-        teacher_id SERIAL PRIMARY KEY,
-        first_name VARCHAR,
-        last_name VARCHAR,
-        home_room_number INTEGER,
-        emergency_phone INTEGER UNIQUE,
-        email VARCHAR(100) UNIQUE,
-        graduation_year VARCHAR(4)
-        );
+-- Step 3 --
+
+        CREATE TABLE teachers(
+          teacher_id SERIAL PRIMARY KEY,
+          first_name VARCHAR NOT NULL,
+          last_name VARCHAR NOT NULL,
+          homeroom_number INTEGER,
+          department VARCHAR(50),
+    	     email VARCHAR(100) UNIQUE,
+          phone VARCHAR(12) UNIQUE
+          );
         
-     
-     
 
 --Once you've made the tables, insert a student named Mark Watney (student_id=1) 
 who has a phone number of 777-555-1234 
@@ -54,11 +55,17 @@ who has a phone number of 777-555-1234
 
 -- step 4 -- 
 
-     INSERT INTO students(student_id, first_name, last_name, home_room_number, emergency_phone, graduation_year)
-     VALUES(1, 'Mark', 'Watney', 5, 777-555-1234, 2035);
-
+     INSERT INTO students(student_id, first_name, last_name, homeroom_number, emergency_phone, graduation_year)
+     VALUES(1, 'Mark', 'Watney', 5, '777-555-1234', 2035);
+     
 --Then insert a teacher names Jonas Salk (teacher_id = 1) 
 who as a homeroom number of 5 and is from the Biology department. 
 --His contact info is: jsalk@school.org and a phone number of 777-555-4321.
+
+-- Step 5 --
+
+INSERT INTO teachers(teacher_id, first_name, last_name, homeroom_number, department, email, phone)
+VALUES (1, 'Jonas', 'Salk', 5, 'Biology','jsalk@school.org', '777-555-4321');
+
 
 --Keep in mind that these insert tasks may effect your constraints!

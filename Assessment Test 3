@@ -20,7 +20,7 @@ homeroom_number, phone,email, and graduation year.
      --Phone numbers and emails must be unique to the individual.
         
          -- step 1 --
- CREATE DATABASE school
+ CREATE DATABASE school;
  
          -- step 2 --
     CREATE TABLE students(
